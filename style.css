@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding: 50px;
+}
 p,
 button,
 a {
@@ -72,7 +78,7 @@ a {
   content: url(/img/rock-floating.png);
   left: 10%;
   top: 40%;
-  animation: bouncy 3s infinite ease-in-out;
+  animation: bouncy 2s infinite ease;
   animation-delay: 0.5s;
 }
 .sec1 .container .right::after {
@@ -80,7 +86,7 @@ a {
   content: url(/img/rock-floating.png);
   right: 10%;
   bottom: 10%;
-  animation: bounce 3s infinite ease-in-out;
+  animation: bounce 2s infinite ease;
 }
 @keyframes bounce {
   0% {
@@ -132,6 +138,12 @@ a {
   border: none;
   box-shadow: 0px 0px 10px #fec675;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.sec1 .container .left button:hover {
+  filter: brightness(80%);
 }
 @media (max-width: 1300px) {
   .sec1 .container .left h1 {
@@ -141,7 +153,7 @@ a {
   }
   .sec1 .container {
     flex-direction: column;
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
   .sec1 .container .left {
     display: flex;
@@ -153,6 +165,10 @@ a {
     height: 400px;
     margin-top: 50px;
   }
+  .sec1 .container .right::after,
+  .sec1 .container .right::before {
+    scale: 0.75;
+  }
 }
 @media (max-width: 780px) {
   .sec1 .container .left h1 {
@@ -162,7 +178,7 @@ a {
   }
   .sec1 .container {
     flex-direction: column;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
   .sec1 .container .left {
     display: flex;
@@ -193,4 +209,88 @@ a {
     box-shadow: 0px 0px 10px #fec675;
     letter-spacing: 1px;
   }
+  .sec1 .container .right::after,
+  .sec1 .container .right::before {
+    scale: 0.5;
+  }
+}
+/* section2 */
+.sec2 .container {
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.sec2 .big-card .arrow::before {
+  position: absolute;
+  content: "\f107";
+  font-family: "FontAwesome";
+  font-size: 40px;
+  color: #353448;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  left: 50%;
+  background-color: #fec675;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec2 .big-card {
+  position: relative;
+  width: 95%;
+  background-color: #353448;
+  /* height: 100%; */
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px 10px #fec675;
+  animation: shadow 5s infinite ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px 45px 30px #fec675;
+  }
+  20% {
+    box-shadow: 0px 0px 45px 0px #fec675;
+  }
+  40% {
+    box-shadow: 0px 0px 45px 15px #fec675;
+  }
+  70% {
+    box-shadow: 0px 0px 45px -10px #fec675;
+  }
+  100% {
+    box-shadow: 0px 0px 45px 30px #fec675;
+  }
+}
+.sec2 .big-card .left {
+  margin-right: 50px;
+}
+.sec2 .big-card .left img {
+  position: relative;
+  top: -60px;
+}
+.sec2 .right {
+  max-width: 500px;
+}
+.sec2 .big-card p {
+  color: #888;
+  line-break: anywhere;
+  font-weight: bold;
+}
+.sec2 .big-card h4 {
+  color: #fec675;
+  letter-spacing: 4px;
+}
+.sec2 .big-card h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 40px;
 }

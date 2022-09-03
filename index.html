@@ -12,20 +12,23 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Uncial+Antiqua&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
   </head>
   <body>
+    <!--navbar-->
     <nav>
       <div class="navbar">
         <div class="container">
           <img src="/img/logo.png" alt="" />
-          <a href="#">ACCUEIL</a>
-          <a href="#">QUI SUIS-JE?</a>
+          <a href="#accueil">ACCUEIL</a>
+          <a href="#bienvenue">QUI SUIS-JE?</a>
           <a href="#">MES SERVICES</a>
           <a href="#">MES MÉTHODES</a>
         </div>
       </div>
     </nav>
-    <section class="sec1">
+    <!--section1-->
+    <section class="sec1" id="accueil">
       <div class="container">
         <div class="left">
           <h1>LE DONJON DES FORGERONS</h1>
@@ -34,9 +37,32 @@
             leur connaissance du combat et d'acquérir une plus grande maîtrise
             du travail de forge.
           </p>
-          <button>Découvrir</button>
+          <a href="#bienvenue">
+            <button>Découvrir</button>
+          </a>
         </div>
         <div class="right"><img src="/img/porte.png" alt="" /></div>
+      </div>
+    </section>
+
+    <!--section 2-->
+    <section id="bienvenue" class="sec2">
+      <div class="container">
+        <div class="big-card">
+          <div class="left">
+            <img src="/img/fondrie.png" alt="" />
+          </div>
+          <div class="right">
+            <h4>Bienvenue dans</h4>
+            <h1>Le donjon des forgerons</h1>
+            <p>
+              Il n'y a aucun prérequis particulier pour y accéder , les
+              mons-tres de la zone des Bandits peuplent le donjon, prenez garde
+              ils sont très aggresifs .
+            </p>
+          </div>
+          <a href="#services" class="arrow"></a>
+        </div>
       </div>
     </section>
   </body>
