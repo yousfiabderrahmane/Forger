@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 p,
-button {
+button,
+a {
   font-family: "poppins";
 }
 h1,
@@ -19,11 +20,90 @@ h6 {
 body {
   background-color: #1d1e31;
 }
+a {
+  text-decoration: none;
+}
+/* navbar */
+.navbar {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar .container {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar .container a {
+  color: white;
+  font-size: 1.4em;
+  transition: all 0.2s;
+}
+.navbar .container a:hover {
+  color: #fec675;
+}
+@media (max-width: 1300px) {
+  .navbar .container a {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 780px) {
+  .navbar .container a {
+    display: none;
+  }
+  .navbar .container img {
+    height: 80px;
+  }
+}
 /* section 1 */
 .sec1 .container .right img {
   height: 600px;
+  z-index: -1;
 }
-
+.sec1 .container .right {
+  position: relative;
+}
+.sec1 .container .right::before {
+  position: absolute;
+  content: url(/img/rock-floating.png);
+  left: 10%;
+  top: 40%;
+  animation: bouncy 3s infinite ease-in-out;
+  animation-delay: 0.5s;
+}
+.sec1 .container .right::after {
+  position: absolute;
+  content: url(/img/rock-floating.png);
+  right: 10%;
+  bottom: 10%;
+  animation: bounce 3s infinite ease-in-out;
+}
+@keyframes bounce {
+  0% {
+    bottom: 10%;
+  }
+  50% {
+    bottom: 13%;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
+@keyframes bouncy {
+  0% {
+    top: 40%;
+  }
+  50% {
+    top: 37%;
+  }
+  100% {
+    top: 40%;
+  }
+}
 .sec1 .container {
   display: flex;
   align-items: center;
@@ -31,7 +111,7 @@ body {
   margin: 0 auto;
 }
 .sec1 .container .left h1 {
-  font-size: 6em;
+  font-size: 5em;
   color: white;
   text-shadow: 0px 0px 10px white;
 }
@@ -82,7 +162,7 @@ body {
   }
   .sec1 .container {
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .sec1 .container .left {
     display: flex;
