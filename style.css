@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+button {
+  font-family: "poppins";
+}
+h1,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Uncial Antiqua", cursive;
+  text-transform: uppercase;
+}
+body {
+  background-color: #1d1e31;
+}
+/* section 1 */
+.sec1 .container .right img {
+  height: 600px;
+}
+
+.sec1 .container {
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.sec1 .container .left h1 {
+  font-size: 6em;
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+.sec1 .container .left p {
+  color: #888;
+  max-width: 800px;
+  font-weight: bold;
+  margin: 40px 0;
+}
+.sec1 .container .left button {
+  width: 300px;
+  height: 65px;
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c2534;
+  background-color: #fec675;
+  border: none;
+  box-shadow: 0px 0px 10px #fec675;
+  letter-spacing: 1px;
+}
+@media (max-width: 1300px) {
+  .sec1 .container .left h1 {
+    font-size: 4em;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+  }
+  .sec1 .container {
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  .sec1 .container .left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .sec1 .container .right img {
+    height: 400px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 780px) {
+  .sec1 .container .left h1 {
+    font-size: 2em;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+  }
+  .sec1 .container {
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  .sec1 .container .left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .sec1 .container .right img {
+    height: 300px;
+    margin-top: 50px;
+  }
+  .sec1 .container .left p {
+    color: #888;
+    max-width: 800px;
+    font-weight: bold;
+    margin: 25px 0;
+    font-size: 0.8em;
+  }
+  .sec1 .container .left button {
+    width: 150px;
+    height: 35px;
+    border-radius: 7px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #2c2534;
+    background-color: #fec675;
+    border: none;
+    box-shadow: 0px 0px 10px #fec675;
+    letter-spacing: 1px;
+  }
+}
