@@ -307,7 +307,7 @@ a {
 }
 .sec2 .big-card p {
   color: #888;
-  line-break: anywhere;
+  /* line-break: anywhere; */
   font-weight: bold;
 }
 .sec2 .big-card h4 {
@@ -349,6 +349,7 @@ a {
   z-index: 99;
   overflow: hidden;
   background: url(/img/bg.png);
+  background-size: contain;
   background-position: center;
   background-attachment: fixed;
   display: flex;
@@ -437,6 +438,211 @@ a {
   }
   .sec3 .title h1 {
     font-size: 3em;
+    text-align: center;
+  }
+}
+/* section 4 */
+.sec4 .center {
+  display: flex;
+  justify-content: center;
+}
+.sec4 .title h4 {
+  color: #fec675;
+  font-size: 2em;
+}
+.sec4 .title h1 {
+  color: white;
+  font-size: 5em;
+}
+.sec4 .container {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.sec4 .card {
+  height: 550px;
+  width: 400px;
+  background-color: #353448;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.sec4 .container .top {
+  background: linear-gradient(to top, #f12711, #f5af19);
+  position: relative;
+
+  height: 50%;
+}
+.sec4 .card:nth-child(1) .top {
+  transform: skew(0deg, -25deg);
+  top: -100px;
+}
+.sec4 .card:nth-child(1) img {
+  transform: skew(0deg, 25deg);
+  position: relative;
+  top: 70px;
+  left: 10px;
+}
+.sec4 .card:nth-child(2) .top {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.sec4 .card:nth-child(3) .top {
+  transform: skew(0deg, 25deg);
+  top: -100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.sec4 .card:nth-child(3) img {
+  transform: skew(0deg, -25deg);
+  position: relative;
+  top: 100px;
+  right: 10px;
+}
+
+.sec4 .bot {
+  margin: 0 20px;
+}
+
+.sec4 .card:nth-child(1) .bot,
+.sec4 .card:nth-child(3) .bot {
+  position: relative;
+  top: -70px;
+}
+.sec4 .card:nth-child(2) .bot {
+  text-align: center;
+  position: relative;
+  top: 119px;
+}
+.sec4 .bot h4 {
+  color: #f5af19;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.sec4 .bot h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+}
+.sec4 .bot .description {
+  /* line-break: anywhere; */
+  text-align: center;
+  color: #b1b1b1;
+  margin-top: 50px;
+}
+.sec4 .card:nth-child(1) h1,
+.sec4 .card:nth-child(1) h4 {
+  text-align: right;
+}
+@media (max-width: 780px) {
+  .sec4 .title h4 {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .sec4 .title h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  .sec4 .card:nth-child(1) .bot,
+  .sec4 .card:nth-child(3) .bot {
+    position: relative;
+    top: -80px;
+  }
+  .sec4 .card:nth-child(2) .bot {
+    text-align: center;
+    position: relative;
+    top: 50px;
+  }
+}
+/* footer */
+footer .container {
+  background-color: #353448;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+  text-align: center;
+  gap: 5em;
+}
+footer h1 {
+  color: #fec675;
+  font-size: 2.5em;
+  position: relative;
+}
+footer .right h1 {
+  text-align: start;
+}
+footer .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+footer .right p {
+  text-align: start;
+}
+footer .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+footer .left a {
+  color: #b1b1b1;
+  text-decoration: none;
+  transition: 0.5s;
+}
+footer h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 20%;
+  background-color: #fec675;
+  left: 0px;
+  top: -10px;
+}
+footer .right p {
+  max-width: 500px;
+  color: #b1b1b1;
+}
+footer .left a:hover {
+  transform: translateX(9px);
+}
+@media (max-width: 780px) {
+  footer h1 {
+    color: #fec675;
+    font-size: 1.5em;
+  }
+  footer .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  footer h1::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fec675;
+    left: 0px;
+    top: -10px;
+  }
+  footer .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  footer .right p {
     text-align: center;
   }
 }
