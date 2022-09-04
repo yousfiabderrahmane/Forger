@@ -361,6 +361,7 @@ a {
 }
 .sec3 .pique-up {
   filter: drop-shadow(0px -8px 10px rgba(254, 198, 117, 0.75));
+  overflow: hidden;
 }
 .sec3 .title h4 {
   color: #fec675;
